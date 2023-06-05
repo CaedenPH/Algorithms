@@ -1,17 +1,18 @@
 """
 Daily challenge for 04/06/2023
-> https://leetcode.com/problems/number-of-provinces/description/
+Difficult: Medium
 
-Time complexity:
-    O(n^2) - n is the number of cities
-    Only beats 5% of submissions
+> https://leetcode.com/problems/number-of-provinces
 
 Notes:
     - Time taken was 43:28
     - Poor solution, needs to be improved
+    - Should've used recursion
+    - Only beats 5% of time submissions
 """
 
 from typing import Dict, List
+
 
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
@@ -25,7 +26,7 @@ class Solution:
                     connections[i] = []
                 if i != j and isConnected[i][j] == 1:
                     connections[i].append(j)
-                
+
         for i in list(connections.keys()).copy():  # 0
             print(i, connections)
             if i not in connections:
@@ -39,7 +40,7 @@ class Solution:
                     connections[v].extend(cc)
                     del connections[i]
                     break
-                
+
             for v in cc:
                 if i not in connections:
                     continue
@@ -50,7 +51,25 @@ class Solution:
                         break
 
         return len(connections)
-        
-            
+
+
 if __name__ == "__main__":
-    Solution().findCircleNum([[1,1,0,0,0,0,0,1,0,0,0,0,0,0,0],[1,1,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,1,0,1,1,0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0,0,1,1,0,0,0,0],[0,0,0,1,0,1,0,0,0,0,1,0,0,0,0],[0,0,0,1,0,0,1,0,1,0,0,0,0,1,0],[1,0,0,0,0,0,0,1,1,0,0,0,0,0,0],[0,0,0,0,0,0,1,1,1,0,0,0,0,1,0],[0,0,0,0,1,0,0,0,0,1,0,1,0,0,1],[0,0,0,0,1,1,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,1,0,1,0,0,0,0,1,0],[0,0,0,0,0,0,0,0,0,1,0,0,0,0,1]])
+    Solution().findCircleNum(
+        [
+            [1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+            [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+            [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+            [0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0],
+            [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0],
+            [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1],
+            [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+        ]
+    )

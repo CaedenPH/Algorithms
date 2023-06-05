@@ -15,7 +15,7 @@ The structure of the repository is as follows:
 │   │   │   ├── day_one.py
 
 ├── Other Problems
-│   ├── 2023
+│   ├── expressive_words.py
 ```
 
 ### Disclaimer
