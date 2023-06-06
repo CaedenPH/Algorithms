@@ -18,6 +18,7 @@ class Node:
         self.parents: List["Node"] = []
         self.children: List["Node"] = []
 
+
 class Solution:
     def recurse_down(self, node: Node, from_node: int) -> int:
         t = 0
@@ -39,9 +40,7 @@ class Solution:
 
         return self.recurse_down(nodes[0], 0)
 
-    
-if __name__ == "__main__":
-    print(Solution().minReorder(6, [[0,1],[1,3],[2,3],[4,0],[4,5]])) # 3   
-    print(Solution().minReorder(5, [[1,0],[1,2],[3,2],[3,4]])) # 2
-    
 
+if __name__ == "__main__":
+    print(Solution().minReorder(6, [[0, 1], [1, 3], [2, 3], [4, 0], [4, 5]]))  # 3
+    print(Solution().minReorder(5, [[1, 0], [1, 2], [3, 2], [3, 4]]))  # 2
