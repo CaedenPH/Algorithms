@@ -24,7 +24,7 @@ class NumberContainers:
         # Simply holds each index and it's number
         self.indexmap: Dict[int, int] = {}
 
-    def binary_search_insert(self, array: List[int], index: int):
+    def binary_search_insert(self, array: List[int], index: int) -> List[int]:
         low = 0
         high = len(array) - 1
 
@@ -64,23 +64,24 @@ class NumberContainers:
         # Here we need to perform a binary search insertion in order to insert
         # The item in the correct place
         else:
-            self.numbermap[number] = self.binary_search_insert(self.numbermap[number], index)
+            self.numbermap[number] = self.binary_search_insert(
+                self.numbermap[number], index
+            )
 
-        
     def find(self, number: int) -> int:
         # Simply return the 0th index (smallest) of the indexes found (or -1)
         return self.numbermap.get(number, [-1])[0]
-    
+
+
 if __name__ == "__main__":
     obj = NumberContainers()
-    print(obj.find(10)) # -1
+    print(obj.find(10))  # -1
 
     obj.change(2, 10)
     obj.change(1, 10)
     obj.change(3, 10)
     obj.change(5, 10)
-    print(obj.find(10)) # 1
+    print(obj.find(10))  # 1
 
     obj.change(1, 20)
-    print(obj.find(10)) # 2
-
+    print(obj.find(10))  # 2
