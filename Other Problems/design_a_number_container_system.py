@@ -6,11 +6,10 @@ Difficulty: Medium
 
 Notes:
     - All about having the fastest possible runtime
-    - Solution read times are O(1) constant time
-    - However due to using the `.remove` function, change times are
-        O(n) instead of the O(log n) which is possible by using binary 
-        search deletion
-    - Beats only 5% of time submissions
+    - Find times are O(1) constant time
+    - Change times are O(log n) time due to having to use binary
+        search to insert and delete
+    - Beats 8.60% of time submissions
 """
 
 from typing import Dict, List
@@ -23,6 +22,20 @@ class NumberContainers:
         self.numbermap: Dict[int, List[int]] = {}
         # Simply holds each index and it's number
         self.indexmap: Dict[int, int] = {}
+
+    def binary_search_delete(self, array: List[int], index: int) -> List[int]:
+        low = 0
+        high = len(array) - 1
+
+        while low <= high:
+            mid = (low + high) // 2
+            if array[mid] == index:
+                array.pop(mid)
+                return array
+            elif array[mid] < index:
+                low = mid + 1
+            else:
+                high = mid - 1
 
     def binary_search_insert(self, array: List[int], index: int) -> List[int]:
         low = 0
@@ -50,9 +63,7 @@ class NumberContainers:
             if len(self.numbermap[n]) == 1:
                 del self.numbermap[n]
             else:
-                # Note: removing the index like this is O(n)
-                # This can be improved by using a binary search deletion for O(log n)
-                self.numbermap[n].remove(index)
+                self.numbermap[n] = self.binary_search_delete(self.numbermap[n], index)
 
         # Set new index
         self.indexmap[index] = number
