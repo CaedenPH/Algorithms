@@ -1,6 +1,6 @@
 """
 Daily challenge for 04/06/2023
-Difficult: Medium
+Difficulty: Medium
 
 > https://leetcode.com/problems/number-of-provinces
 

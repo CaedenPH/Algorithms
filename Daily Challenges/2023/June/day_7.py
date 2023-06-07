@@ -8,6 +8,7 @@ Notes:
     - Beats 82% of time submissions
 """
 
+
 class Solution:
     def minFlips(self, a: int, b: int, c: int) -> int:
         ab = format(a, "b")
@@ -26,12 +27,12 @@ class Solution:
                 if ab[i] == "1":
                     n += 1
                 if bb[i] == "1":
-                    n += 1 
+                    n += 1
             else:  # cb[i] == 1
                 # Both bits cannot be 0
                 if ab[i] == "0" and bb[i] == "0":
                     n += 1
-        return n   
+        return n
 
 
 if __name__ == "__main__":
