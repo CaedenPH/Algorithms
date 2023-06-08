@@ -7,7 +7,9 @@ Difficulty: Easy
 Notes:
     - Time taken was 4:09 minutes
     - Beats 48% of time submissions
-    - Will refactor this solution in order to achieve a better time complexity
+    - See also `day_8_binary_search`, another solution
+        with O(m logn) opposed to this O(n^2) time
+        complexity
 """
 
 from typing import List
@@ -23,6 +25,11 @@ class Solution:
                     t += l - i
                     break
         return t
-    
+
+
 if __name__ == "__main__":
-    print(Solution().countNegatives([[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]))
+    print(
+        Solution().countNegatives(
+            [[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]]
+        )
+    )
