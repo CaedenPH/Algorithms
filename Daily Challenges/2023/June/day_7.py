@@ -2,7 +2,7 @@
 Daily challenge for 07/06/2023
 Difficulty: Medium
 
-> https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/submissions/965897260/
+> https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c
 
 Notes:
     - Beats 82% of time submissions

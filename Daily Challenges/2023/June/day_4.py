@@ -5,7 +5,7 @@ Difficulty: Medium
 > https://leetcode.com/problems/number-of-provinces
 
 Notes:
-    - Time taken was 43:28
+    - Time taken was 43:28 minutes
     - Poor solution, needs to be improved
     - Should've used recursion
     - Only beats 5% of time submissions
@@ -28,7 +28,6 @@ class Solution:
                     connections[i].append(j)
 
         for i in list(connections.keys()).copy():  # 0
-            print(i, connections)
             if i not in connections:
                 continue
 

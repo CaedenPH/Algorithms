@@ -5,7 +5,7 @@ Difficulty: Easy
 > https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence
 
 Notes:
-    - Time taken was 2:04
+    - Time taken was 2:04 minutes
     - Beats 43% of time submissions
     - In order to improve time complexity, the solution should be refactored
         so that the array does not need to be sorted
