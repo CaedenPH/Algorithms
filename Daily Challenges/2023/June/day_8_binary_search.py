@@ -49,6 +49,7 @@ class Solution:
             t += bound
         return (m * n) - t
 
+
 if __name__ == "__main__":
     print(
         Solution().countNegatives(
