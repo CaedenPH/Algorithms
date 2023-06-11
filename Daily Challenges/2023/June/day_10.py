@@ -10,6 +10,7 @@ Notes:
     - Memory beats 86% due to only holding diffs
 """
 
+
 class SnapshotArray:
     def __init__(self, length: int):
         self.length = length
@@ -18,7 +19,7 @@ class SnapshotArray:
 
     def set(self, index: int, val: int) -> None:
         self.snaps[self.snap_count][index] = val
- 
+
     def snap(self) -> int:
         self.snap_count += 1
         self.snaps[self.snap_count] = {}
@@ -30,6 +31,7 @@ class SnapshotArray:
                 return self.snaps[i][index]
         return 0
 
+
 if __name__ == "__main__":
     obj = SnapshotArray(1)
     obj.set(0, 4)
@@ -39,5 +41,3 @@ if __name__ == "__main__":
     print(obj.get(0, 0))
     print(obj.snap())
     print(obj.get(0, 1))
-
-    

@@ -1,10 +1,10 @@
 ## Leetcode
-
 This is a repository where I will be saving my solutions to the problems I solve on Leetcode. 
 I aim to solve the daily challenge everyday and also solve other problems as well.
 
 ### Languages
 As I start this repository, I will be using Python and Javascript to solve the problems. As I get more comfortable solving leetcode problems, I will start using using C++ and Java as well.
+Note: with python submissions, the leetcode runtime and memory usage varies drastically. One solution may can get a 5% time submission and at the same time an 80% time submission.
 
 ### Structure
 The structure of the repository is as follows:
