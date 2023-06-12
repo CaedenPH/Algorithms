@@ -124,11 +124,12 @@ class UpdateReadme:
         Prints the README with the updated statistics.
         Used with the linux tee command to update the README content.
         """
-        with open("README.md", encoding="utf-8") as readme:
+        with open("README.md", "r", encoding="utf-8") as readme:
             content = readme.read()
 
-        before_progress = content.split("### Statistics")[0]
-        print(before_progress + "\n### Statistics\n" + self.generate_statistics())
+        before_statistics = content.split("### Statistics")[0]
+        with open("README.md", "w", encoding="utf-8") as readme:
+            readme.write(before_statistics + "\n### Statistics\n" + self.generate_statistics())
 
 
 if __name__ == "__main__":
