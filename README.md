@@ -1,4 +1,5 @@
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
