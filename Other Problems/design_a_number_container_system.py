@@ -75,9 +75,7 @@ class NumberContainers:
         # Here we need to perform a binary search insertion in order to insert
         # The item in the correct place
         else:
-            self.numbermap[number] = self.binary_search_insert(
-                self.numbermap[number], index
-            )
+            self.numbermap[number] = self.binary_search_insert(self.numbermap[number], index)
 
     def find(self, number: int) -> int:
         # Simply return the 0th index (smallest) of the indexes found (or -1)

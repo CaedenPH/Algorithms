@@ -52,7 +52,5 @@ class Solution:
 
 if __name__ == "__main__":
     print(
-        Solution().countNegatives(
-            [[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]]
-        )
+        Solution().countNegatives([[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]])
     )

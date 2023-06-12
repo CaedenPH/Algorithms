@@ -20,17 +20,13 @@ class ListNode:
 
 
 class Solution:
-    def recurse_linked_list(
-        self, linked_list: Optional[ListNode], numbers: List[int]
-    ) -> List[int]:
+    def recurse_linked_list(self, linked_list: Optional[ListNode], numbers: List[int]) -> List[int]:
         if not linked_list:
             return numbers
         numbers.append(str(linked_list.val))
         return self.recurse_linked_list(linked_list.next, numbers)
 
-    def addTwoNumbers(
-        self, l1: Optional[ListNode], l2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         numbers = [self.recurse_linked_list(ll, []) for ll in [l1, l2]]
         added_numbers = str(sum(int("".join(n[::-1])) for n in numbers))[::-1]
 

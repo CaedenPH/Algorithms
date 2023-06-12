@@ -1,6 +1,6 @@
 # The objective of this GitHub Action is to update the README.md file (if needed)
 # when doing a git push
-name: directory_writer
+name: Update README Algorithm Tracker
 on: [push]
 jobs:
   build:
