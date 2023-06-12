@@ -1,5 +1,5 @@
 """
-Daily challenge for 10/06/2023
+Daily challenge for 11/06/2023
 Difficulty: Medium
 
 > https://leetcode.com/problems/snapshot-array
