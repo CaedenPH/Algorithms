@@ -23,6 +23,7 @@ The solutions provided here are not the only solutions to the problems. There ar
 My solutions may not be the most optimal solutions. I will try to improve them as I learn more about the problems and the languages I am using.
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
@@ -36,14 +37,14 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 |------------|----------------------|
 | Java       |                    9 |
 | JavaScript |                    3 |
-| Python3    |                   35 |
+| Python3    |                   36 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   43 |
+| All          |                   44 |
 | Easy         |                   23 |
-| Medium       |                   17 |
+| Medium       |                   18 |
 | Hard         |                    3 |
 
 #### Total problems by topic
@@ -55,7 +56,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Union Find           |                    1 | advanced     |
 | Tree                 |                    2 | intermediate |
 | Binary Tree          |                    2 | intermediate |
-| Hash Table           |                    7 | intermediate |
+| Hash Table           |                    8 | intermediate |
 | Ordered Set          |                    1 | intermediate |
 | Graph                |                    2 | intermediate |
 | Greedy               |                    3 | intermediate |
@@ -67,10 +68,10 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Bit Manipulation     |                    1 | intermediate |
 | Math                 |                   11 | intermediate |
 | Design               |                    2 | intermediate |
-| Array                |                   15 | fundamental  |
-| Matrix               |                    1 | fundamental  |
+| Array                |                   16 | fundamental  |
+| Matrix               |                    2 | fundamental  |
 | String               |                   13 | fundamental  |
-| Simulation           |                    1 | fundamental  |
+| Simulation           |                    2 | fundamental  |
 | Sorting              |                    2 | fundamental  |
 | Stack                |                    2 | fundamental  |
 | Queue                |                    1 | fundamental  |
