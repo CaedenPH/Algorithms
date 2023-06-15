@@ -29,6 +29,7 @@ class Solution:
             levels[level] = [node.val]
         else:
             levels[level].append(node.val)
+
         levels = self.dfs(node.left, levels, level + 1)
         levels = self.dfs(node.right, levels, level + 1)
         return levels
