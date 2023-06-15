@@ -25,11 +25,12 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
 |---------|--------------------|
-| June    |                 10 |
+| June    |                 11 |
 | May     |                  0 |
 | April   |                  0 |
 
@@ -38,14 +39,14 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 |------------|----------------------|
 | Java       |                    9 |
 | JavaScript |                    3 |
-| Python3    |                   38 |
+| Python3    |                   39 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   45 |
+| All          |                   46 |
 | Easy         |                   24 |
-| Medium       |                   18 |
+| Medium       |                   19 |
 | Hard         |                    3 |
 
 #### Total problems by topic
@@ -55,15 +56,15 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Divide and Conquer   |                    1 | advanced     |
 | Trie                 |                    1 | advanced     |
 | Union Find           |                    1 | advanced     |
-| Tree                 |                    3 | intermediate |
-| Binary Tree          |                    3 | intermediate |
+| Tree                 |                    4 | intermediate |
+| Binary Tree          |                    4 | intermediate |
 | Hash Table           |                    8 | intermediate |
 | Ordered Set          |                    1 | intermediate |
 | Graph                |                    2 | intermediate |
 | Greedy               |                    3 | intermediate |
 | Binary Search        |                    7 | intermediate |
-| Depth-First Search   |                    5 | intermediate |
-| Breadth-First Search |                    3 | intermediate |
+| Depth-First Search   |                    6 | intermediate |
+| Breadth-First Search |                    4 | intermediate |
 | Recursion            |                    2 | intermediate |
 | Sliding Window       |                    1 | intermediate |
 | Bit Manipulation     |                    1 | intermediate |
