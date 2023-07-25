@@ -28,11 +28,12 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
 |---------|--------------------|
-| July    |                  0 |
+| July    |                  1 |
 | June    |                 11 |
 | May     |                  0 |
 
@@ -41,14 +42,14 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 |------------|----------------------|
 | Java       |                    9 |
 | JavaScript |                    3 |
-| Python3    |                   40 |
+| Python3    |                   41 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   47 |
+| All          |                   48 |
 | Easy         |                   24 |
-| Medium       |                   20 |
+| Medium       |                   21 |
 | Hard         |                    3 |
 
 #### Total problems by topic
@@ -65,7 +66,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Ordered Set          |                    1 | intermediate |
 | Graph                |                    2 | intermediate |
 | Greedy               |                    3 | intermediate |
-| Binary Search        |                    7 | intermediate |
+| Binary Search        |                    8 | intermediate |
 | Depth-First Search   |                    6 | intermediate |
 | Breadth-First Search |                    4 | intermediate |
 | Recursion            |                    2 | intermediate |
@@ -73,7 +74,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Bit Manipulation     |                    1 | intermediate |
 | Math                 |                   11 | intermediate |
 | Design               |                    2 | intermediate |
-| Array                |                   16 | fundamental  |
+| Array                |                   17 | fundamental  |
 | Matrix               |                    2 | fundamental  |
 | String               |                   14 | fundamental  |
 | Simulation           |                    2 | fundamental  |
