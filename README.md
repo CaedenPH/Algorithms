@@ -27,39 +27,41 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
 |---------|--------------------|
+| July    |                  0 |
 | June    |                 11 |
 | May     |                  0 |
-| April   |                  0 |
 
 #### Total problems by language
 | Language   |   Number of Problems |
 |------------|----------------------|
 | Java       |                    9 |
 | JavaScript |                    3 |
-| Python3    |                   39 |
+| Python3    |                   40 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   46 |
+| All          |                   47 |
 | Easy         |                   24 |
-| Medium       |                   19 |
+| Medium       |                   20 |
 | Hard         |                    3 |
 
 #### Total problems by topic
 | Topic                |   Number of Problems | Level        |
 |----------------------|----------------------|--------------|
+| Backtracking         |                    1 | advanced     |
 | Dynamic Programming  |                    3 | advanced     |
 | Divide and Conquer   |                    1 | advanced     |
 | Trie                 |                    1 | advanced     |
 | Union Find           |                    1 | advanced     |
 | Tree                 |                    4 | intermediate |
 | Binary Tree          |                    4 | intermediate |
-| Hash Table           |                    8 | intermediate |
+| Hash Table           |                    9 | intermediate |
 | Ordered Set          |                    1 | intermediate |
 | Graph                |                    2 | intermediate |
 | Greedy               |                    3 | intermediate |
@@ -73,7 +75,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Design               |                    2 | intermediate |
 | Array                |                   16 | fundamental  |
 | Matrix               |                    2 | fundamental  |
-| String               |                   13 | fundamental  |
+| String               |                   14 | fundamental  |
 | Simulation           |                    2 | fundamental  |
 | Sorting              |                    2 | fundamental  |
 | Stack                |                    2 | fundamental  |
