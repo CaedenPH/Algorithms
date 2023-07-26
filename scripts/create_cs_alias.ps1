@@ -6,7 +6,6 @@ $func = 'function cs($file) {
         mkdir dist
     }
     csc /out:dist/program.exe $file
-    cls
     ./dist/program.exe
 }'
 Add-Content $PROFILE $func
