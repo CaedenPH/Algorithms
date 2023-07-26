@@ -35,6 +35,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
@@ -47,15 +48,15 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Language   |   Number of Problems |
 |------------|----------------------|
 | Java       |                    9 |
-| C#         |                    1 |
+| C#         |                    2 |
 | JavaScript |                    3 |
 | Python3    |                   42 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   50 |
-| Easy         |                   25 |
+| All          |                   51 |
+| Easy         |                   26 |
 | Medium       |                   22 |
 | Hard         |                    3 |
 
@@ -88,5 +89,5 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Sorting              |                    2 | fundamental  |
 | Stack                |                    3 | fundamental  |
 | Queue                |                    1 | fundamental  |
-| Linked List          |                    1 | fundamental  |
+| Linked List          |                    2 | fundamental  |
 | Two Pointers         |                    3 | fundamental  |
