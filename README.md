@@ -30,6 +30,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
@@ -48,16 +49,16 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   48 |
+| All          |                   49 |
 | Easy         |                   24 |
-| Medium       |                   21 |
+| Medium       |                   22 |
 | Hard         |                    3 |
 
 #### Total problems by topic
 | Topic                |   Number of Problems | Level        |
 |----------------------|----------------------|--------------|
 | Backtracking         |                    1 | advanced     |
-| Dynamic Programming  |                    3 | advanced     |
+| Dynamic Programming  |                    4 | advanced     |
 | Divide and Conquer   |                    1 | advanced     |
 | Trie                 |                    1 | advanced     |
 | Union Find           |                    1 | advanced     |
