@@ -37,6 +37,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
@@ -49,15 +50,15 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Language   |   Number of Problems |
 |------------|----------------------|
 | Java       |                    9 |
-| C#         |                    3 |
+| C#         |                    4 |
 | JavaScript |                    3 |
 | Python3    |                   42 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   52 |
-| Easy         |                   27 |
+| All          |                   53 |
+| Easy         |                   28 |
 | Medium       |                   22 |
 | Hard         |                    3 |
 
@@ -71,7 +72,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Union Find           |                    1 | advanced     |
 | Tree                 |                    4 | intermediate |
 | Binary Tree          |                    4 | intermediate |
-| Hash Table           |                    9 | intermediate |
+| Hash Table           |                   10 | intermediate |
 | Ordered Set          |                    1 | intermediate |
 | Graph                |                    2 | intermediate |
 | Greedy               |                    3 | intermediate |
@@ -83,11 +84,11 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Bit Manipulation     |                    1 | intermediate |
 | Math                 |                   11 | intermediate |
 | Design               |                    2 | intermediate |
-| Array                |                   19 | fundamental  |
+| Array                |                   20 | fundamental  |
 | Matrix               |                    2 | fundamental  |
 | String               |                   14 | fundamental  |
 | Simulation           |                    3 | fundamental  |
-| Sorting              |                    2 | fundamental  |
+| Sorting              |                    3 | fundamental  |
 | Stack                |                    3 | fundamental  |
 | Queue                |                    1 | fundamental  |
 | Linked List          |                    2 | fundamental  |
