@@ -36,6 +36,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
@@ -48,15 +49,15 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Language   |   Number of Problems |
 |------------|----------------------|
 | Java       |                    9 |
-| C#         |                    2 |
+| C#         |                    3 |
 | JavaScript |                    3 |
 | Python3    |                   42 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   51 |
-| Easy         |                   26 |
+| All          |                   52 |
+| Easy         |                   27 |
 | Medium       |                   22 |
 | Hard         |                    3 |
 
@@ -64,7 +65,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Topic                |   Number of Problems | Level        |
 |----------------------|----------------------|--------------|
 | Backtracking         |                    1 | advanced     |
-| Dynamic Programming  |                    4 | advanced     |
+| Dynamic Programming  |                    5 | advanced     |
 | Divide and Conquer   |                    1 | advanced     |
 | Trie                 |                    1 | advanced     |
 | Union Find           |                    1 | advanced     |
@@ -82,7 +83,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Bit Manipulation     |                    1 | intermediate |
 | Math                 |                   11 | intermediate |
 | Design               |                    2 | intermediate |
-| Array                |                   18 | fundamental  |
+| Array                |                   19 | fundamental  |
 | Matrix               |                    2 | fundamental  |
 | String               |                   14 | fundamental  |
 | Simulation           |                    3 | fundamental  |
