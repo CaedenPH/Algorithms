@@ -34,6 +34,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
@@ -46,14 +47,15 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Language   |   Number of Problems |
 |------------|----------------------|
 | Java       |                    9 |
+| C#         |                    1 |
 | JavaScript |                    3 |
 | Python3    |                   42 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
 |--------------|----------------------|
-| All          |                   49 |
-| Easy         |                   24 |
+| All          |                   50 |
+| Easy         |                   25 |
 | Medium       |                   22 |
 | Hard         |                    3 |
 
@@ -79,12 +81,12 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Bit Manipulation     |                    1 | intermediate |
 | Math                 |                   11 | intermediate |
 | Design               |                    2 | intermediate |
-| Array                |                   17 | fundamental  |
+| Array                |                   18 | fundamental  |
 | Matrix               |                    2 | fundamental  |
 | String               |                   14 | fundamental  |
-| Simulation           |                    2 | fundamental  |
+| Simulation           |                    3 | fundamental  |
 | Sorting              |                    2 | fundamental  |
-| Stack                |                    2 | fundamental  |
+| Stack                |                    3 | fundamental  |
 | Queue                |                    1 | fundamental  |
 | Linked List          |                    1 | fundamental  |
 | Two Pointers         |                    3 | fundamental  |
