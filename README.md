@@ -29,11 +29,12 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
 |---------|--------------------|
-| July    |                  1 |
+| July    |                  2 |
 | June    |                 11 |
 | May     |                  0 |
 
@@ -42,7 +43,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 |------------|----------------------|
 | Java       |                    9 |
 | JavaScript |                    3 |
-| Python3    |                   41 |
+| Python3    |                   42 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
