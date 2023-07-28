@@ -15,7 +15,17 @@ The structure of the repository is as follows:
 │   │   │   ├── day_one.py
 
 ├── Other Problems
-│   ├── expressive_words.py
+|    ├── Python
+│    |    ├── expressive_words.py
+
+├── Algorithms
+|    ├── Python
+|    |   ├── wa_tor.py
+
+├── Advent of Code
+|    ├── Python
+|    |   ├── day_one.py
+
 ```
 
 ### Disclaimer
