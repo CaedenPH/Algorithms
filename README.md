@@ -50,13 +50,14 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
 | Month   |   Daily Challenges |
 |---------|--------------------|
+| August  |                  0 |
 | July    |                  2 |
 | June    |                 11 |
-| May     |                  0 |
 
 #### Total problems by language
 | Language   |   Number of Problems |
