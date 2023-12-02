@@ -51,13 +51,14 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 
 
+
 ### Statistics
 #### Daily challenges by month
-| Month   |   Daily Challenges |
-|---------|--------------------|
-| August  |                  0 |
-| July    |                  2 |
-| June    |                 11 |
+| Month    |   Daily Challenges |
+|----------|--------------------|
+| December |                  0 |
+| November |                  0 |
+| October  |                  0 |
 
 #### Total problems by language
 | Language   |   Number of Problems |
@@ -65,7 +66,7 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 | Java       |                    9 |
 | C#         |                    5 |
 | JavaScript |                    3 |
-| Python3    |                   42 |
+| Python3    |                   39 |
 
 #### Total problems by difficulty
 | Difficulty   |   Number of Problems |
