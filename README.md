@@ -33,29 +33,6 @@ The solutions provided here are not the only solutions to the problems. There ar
 My solutions may not be the most optimal solutions. I will try to improve them as I learn more about the problems and the languages I am using.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Statistics
 #### Daily challenges by month
 | Month    |   Daily Challenges |
