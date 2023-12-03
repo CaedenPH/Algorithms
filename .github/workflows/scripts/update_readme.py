@@ -129,7 +129,7 @@ class UpdateReadme:
 
         before_statistics = content.split("### Statistics")[0]
         with open("README.md", "w", encoding="utf-8") as readme:
-            readme.write(before_statistics + "\n### Statistics\n" + self.generate_statistics())
+            readme.write(before_statistics + "### Statistics\n" + self.generate_statistics())
 
 
 if __name__ == "__main__":
