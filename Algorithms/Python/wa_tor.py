@@ -15,7 +15,7 @@ to result in one of the three possible results.
 from collections.abc import Callable
 from random import randint, shuffle
 from time import sleep
-from typing import Any, Literal
+from typing import Literal
 
 WIDTH = 50  # Width of the Wa-Tor planet
 HEIGHT = 50  # Height of the Wa-Tor planet
@@ -54,7 +54,7 @@ class Entity:
         self.coords = coords
 
         self.remaining_reproduction_time = (
-            PREY_REPRODUCTION_TIME if prey is True else PREDATOR_REPRODUCTION_TIME
+            PREY_REPRODUCTION_TIME if prey else PREDATOR_REPRODUCTION_TIME
         )
         self.energy_value = None if prey is True else PREDATOR_INITIAL_ENERGY_VALUE
         self.alive = True
@@ -124,9 +124,9 @@ class WaTor:
 
         # Populate planet with predators and prey randomly
         for _ in range(PREY_INITIAL_COUNT):
-            self.add_entity(True)
+            self.add_entity(prey=True)
         for _ in range(PREDATOR_INITIAL_COUNT):
-            self.add_entity(False)
+            self.add_entity(prey=False)
         self.set_planet(self.planet)
 
     def set_planet(self, planet: list[list[Entity | None]]) -> None:
@@ -167,8 +167,8 @@ class WaTor:
         while True:
             row, col = randint(0, self.height - 1), randint(0, self.width - 1)
             if self.planet[row][col] is None:
-                break
-        self.planet[row][col] = Entity(prey=prey, coords=(row, col))
+                self.planet[row][col] = Entity(prey=prey, coords=(row, col))
+                return
 
     def get_entities(self) -> list[Entity]:
         """
@@ -178,11 +178,7 @@ class WaTor:
         >>> len(wt.get_entities()) == PREDATOR_INITIAL_COUNT + PREY_INITIAL_COUNT
         True
         """
-        start: Any = []
-        return sum(
-            [[entity for entity in column if entity] for column in self.planet],
-            start=start,
-        )
+        return [entity for column in self.planet for entity in column if entity]
 
     def balance_predators_and_prey(self) -> None:
         """
@@ -203,19 +199,18 @@ class WaTor:
         shuffle(entities)
 
         if len(entities) >= MAX_ENTITIES - MAX_ENTITIES / 10:
-            prey = list(filter(lambda entity: entity.prey is True, entities))
-            predators = list(filter(lambda entity: entity.prey is True, entities))
+            prey = [entity for entity in entities if entity.prey]
+            predators = [entity for entity in entities if not entity.prey]
 
             prey_count, predator_count = len(prey), len(predators)
 
-            if prey_count > predator_count:
-                for entity in prey[:DELETE_UNBALANCED_ENTITIES]:
-                    # Purge the first n entities of the prey
-                    self.planet[entity.coords[0]][entity.coords[1]] = None
-            else:
-                for entity in predators[:DELETE_UNBALANCED_ENTITIES]:
-                    # Purge the first n entities of the predators
-                    self.planet[entity.coords[0]][entity.coords[1]] = None
+            entities_to_purge = (
+                prey[:DELETE_UNBALANCED_ENTITIES]
+                if prey_count > predator_count
+                else predators[:DELETE_UNBALANCED_ENTITIES]
+            )
+            for entity in entities_to_purge:
+                self.planet[entity.coords[0]][entity.coords[1]] = None
 
     def get_surrounding_prey(self, entity: Entity) -> list[Entity]:
         """
@@ -230,8 +225,8 @@ class WaTor:
         ... [None, Entity(True, (2, 1)), None]])
         >>> wt.get_surrounding_prey(
         ... Entity(False, (1, 1)))  # doctest: +NORMALIZE_WHITESPACE
-        [Entity(prey=True, coords=(2, 1), remaining_reproduction_time=5),
-        Entity(prey=True, coords=(0, 1), remaining_reproduction_time=5)]
+        [Entity(prey=True, coords=(0, 1), remaining_reproduction_time=5),
+        Entity(prey=True, coords=(2, 1), remaining_reproduction_time=5)]
         >>> wt.set_planet([[Entity(False, (0, 0))]])
         >>> wt.get_surrounding_prey(Entity(False, (0, 0)))
         []
@@ -242,42 +237,22 @@ class WaTor:
         >>> wt.get_surrounding_prey(Entity(False, (1, 0)))
         [Entity(prey=True, coords=(0, 0), remaining_reproduction_time=5)]
         """
-        coords = entity.coords
-        row, col = coords
-        surrounding_prey: list[Entity] = []
+        row, col = entity.coords
+        adjacent: list[tuple[int, int]] = [
+            (row - 1, col),  # North
+            (row + 1, col),  # South
+            (row, col - 1),  # West
+            (row, col + 1),  # East
+        ]
 
-        # Go through N, S, E, W with two booleans
-        # making four different combinations
-        for i in range(2):
-            for j in range(2):
-                vertical = bool(i)
-                positive = bool(j)
-
-                # North (make sure in bounds)
-                if vertical is True and positive is True and row - 1 >= 0:
-                    if (
-                        ent := self.planet[row - 1][col]
-                    ) is not None and ent.prey is True:
-                        surrounding_prey.append(ent)
-                # South (make sure in bounds)
-                elif vertical is True and positive is False and self.height > row + 1:
-                    if (
-                        ent := self.planet[row + 1][col]
-                    ) is not None and ent.prey is True:
-                        surrounding_prey.append(ent)
-                # East (make sure in bounds)
-                elif vertical is False and positive is True and self.width > col + 1:
-                    if (
-                        ent := self.planet[row][col + 1]
-                    ) is not None and ent.prey is True:
-                        surrounding_prey.append(ent)
-                # South (make sure in bounds)
-                elif vertical is False and positive is False and col - 1 >= 0:
-                    if (
-                        ent := self.planet[row][col - 1]
-                    ) is not None and ent.prey is True:
-                        surrounding_prey.append(ent)
-        return surrounding_prey
+        return [
+            ent
+            for r, c in adjacent
+            if 0 <= r < self.height
+            and 0 <= c < self.width
+            and (ent := self.planet[r][c]) is not None
+            and ent.prey
+        ]
 
     def move_and_reproduce(
         self, entity: Entity, direction_orders: list[Literal["N", "E", "S", "W"]]
@@ -306,7 +281,6 @@ class WaTor:
         [None, None, None],
         [None, None, None]]
         >>> wt.planet[0][0] = Entity(True, coords=(0, 0))
-        >>> wt.planet[0][2] = None
         >>> wt.move_and_reproduce(Entity(True, coords=(0, 1)),
         ... direction_orders=["N", "W", "E", "S"])
         >>> wt.planet  # doctest: +NORMALIZE_WHITESPACE
@@ -335,40 +309,29 @@ class WaTor:
         Entity(prey=False, coords=(0, 1), remaining_reproduction_time=20,
         energy_value=15)]]
         """
-        coords = entity.coords
-        row, col = coords
+        row, col = coords = entity.coords
 
-        for direction in direction_orders:
-            # If the direction is North and the northern square
-            # is within the top bound of the planet
-            if direction == "N" and row - 1 >= 0:
-                if self.planet[row - 1][col] is None:
-                    self.planet[row - 1][col] = entity
-                    entity.coords = (row - 1, col)
-            # If the direction is South and the southern square
-            # is within the bottom bound of the planet
-            elif direction == "S" and self.height > row + 1:
-                if self.planet[row + 1][col] is None:
-                    self.planet[row + 1][col] = entity
-                    entity.coords = (row + 1, col)
-            # If the direction is East and the eastern square
-            # is within the right bound of the planet
-            elif direction == "E" and self.width > col + 1:
-                if self.planet[row][col + 1] is None:
-                    self.planet[row][col + 1] = entity
-                    entity.coords = (row, col + 1)
-            # If the direction is West and the western square
-            # is within the left bound of the planet
-            elif direction == "W" and col - 1 >= 0:
-                if self.planet[row][col - 1] is None:
-                    self.planet[row][col - 1] = entity
-                    entity.coords = (row, col - 1)
+        adjacent_squares: dict[Literal["N", "E", "S", "W"], tuple[int, int]] = {
+            "N": (row - 1, col),  # North
+            "S": (row + 1, col),  # South
+            "W": (row, col - 1),  # West
+            "E": (row, col + 1),  # East
+        }
+        # Weight adjacent locations
+        adjacent: list[tuple[int, int]] = []
+        for order in direction_orders:
+            adjacent.append(adjacent_squares[order])
 
-            # See if move was successful (instead of adding a break)
-            # to each successful move
-            if coords != entity.coords:
-                # Remove the previous location of the entity
+        for r, c in adjacent:
+            if (
+                0 <= r < self.height
+                and 0 <= c < self.width
+                and self.planet[r][c] is None
+            ):
+                # Move entity to empty adjacent square
+                self.planet[r][c] = entity
                 self.planet[row][col] = None
+                entity.coords = (r, c)
                 break
 
         # (2.) See if it possible to reproduce in previous square
@@ -515,7 +478,7 @@ class WaTor:
                 self.time_passed(self, iter_num)
 
 
-def display_visually(wt: WaTor, iter_number: int, *, colour: bool = True) -> None:
+def visualise(wt: WaTor, iter_number: int, *, colour: bool = True) -> None:
     """
     Visually displays the Wa-Tor planet using
     an ascii code in terminal to clear and re-print
@@ -533,27 +496,27 @@ def display_visually(wt: WaTor, iter_number: int, *, colour: bool = True) -> Non
     ... [Entity(False, coords=(1, 0)), None, Entity(False, coords=(1, 2))],
     ... [None, Entity(True, coords=(2, 1)), None]
     ... ])
-    >>> display_visually(wt, 0, colour=False)  # doctest: +NORMALIZE_WHITESPACE
+    >>> visualise(wt, 0, colour=False)  # doctest: +NORMALIZE_WHITESPACE
     #  x  .
     x  .  x
     .  #  .
     <BLANKLINE>
     Iteration: 0 | Prey count: 2 | Predator count: 3 |
     """
-    if colour is True:
+    if colour:
         __import__("os").system("")
         print("\x1b[0;0H\x1b[2J\x1b[?25l")
 
-    reprint = "\x1b[0;0H" if colour is True else ""
-    ansii_colour_end = "\x1b[0m " if colour is True else " "
+    reprint = "\x1b[0;0H" if colour else ""
+    ansi_colour_end = "\x1b[0m " if colour else " "
 
     planet = wt.planet
     output = ""
 
     # Iterate over every entity in the planet
-    for i in range(len(planet)):
-        for j in range(len(planet[0])):
-            if (entity := planet[i][j]) is None:
+    for row in planet:
+        for entity in row:
+            if entity is None:
                 output += " . "
             else:
                 if colour is True:
@@ -562,12 +525,12 @@ def display_visually(wt: WaTor, iter_number: int, *, colour: bool = True) -> Non
                         if entity.prey
                         else "\x1b[38;2;255;255;15m"
                     )
-                output += f" {'#' if entity.prey else 'x'}{ansii_colour_end}"
+                output += f" {'#' if entity.prey else 'x'}{ansi_colour_end}"
 
         output += "\n"
 
     entities = wt.get_entities()
-    prey_count = len(list(filter(lambda entity: entity.prey is True, entities)))
+    prey_count = sum(entity.prey for entity in entities)
 
     print(
         f"{output}\n Iteration: {iter_number} | Prey count: {prey_count} | "
@@ -583,5 +546,5 @@ if __name__ == "__main__":
     doctest.testmod()
 
     wt = WaTor(WIDTH, HEIGHT)
-    wt.time_passed = display_visually
+    wt.time_passed = visualise
     wt.run(iteration_count=100_000)

@@ -7,6 +7,7 @@ Created: 21/02/2022
 
 from random import choice, randint
 
+
 class SudokuUtils:
     """
     Represents the soduku utils that will be required
@@ -241,4 +242,5 @@ if __name__ == "__main__":
 
     import timeit
 
-    print(timeit.timeit("SudokuGenerator().generate_puzzle('medium')", number=1000, globals=globals()))
+    cmd = "SudokuGenerator().generate_puzzle('medium')"
+    print(timeit.timeit(cmd, number=1000, globals=globals()))
