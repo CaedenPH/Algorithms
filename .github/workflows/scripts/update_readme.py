@@ -127,9 +127,9 @@ class UpdateReadme:
         with open("README.md", "r", encoding="utf-8") as readme:
             content = readme.read()
 
-        before_statistics = content.split("### Statistics")[0]
+        before_statistics = content.split("### Leetcode Statistics")[0]
         with open("README.md", "w", encoding="utf-8") as readme:
-            readme.write(before_statistics + "### Statistics\n" + self.generate_statistics())
+            readme.write(before_statistics + "### Leetcode Statistics\n" + self.generate_statistics())
 
 
 if __name__ == "__main__":
