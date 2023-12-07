@@ -32,7 +32,7 @@ def parse_raw(raw: str):
 data = parse_raw(raw)
 
 
-def solve(types):
+def solve(types, p2=False):
     flatten = []
     for type in types[::-1]:
         def sorter(card):
@@ -40,7 +40,7 @@ def solve(types):
                 "A": 14,
                 "K": 13,
                 "Q": 12,
-                "J": 11,
+                "J": 1 if p2 else 11,
                 "T": 10
             }
             vcard = 0
@@ -131,7 +131,7 @@ def part_two(data=data):
                 types[5].append(hand)
         elif most_common == 1 and len(charcount) == 5:
             types[6].append(hand)
-    return solve(types)
+    return solve(types, True)
 
 
 aoc_helper.lazy_test(day=7, year=2023, parse=parse_raw, solution=part_two)
