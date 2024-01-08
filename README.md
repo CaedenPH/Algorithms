@@ -32,9 +32,9 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 #### Daily challenges by month
 | Month    |   Daily Challenges |
 |----------|--------------------|
+| January  |                  0 |
 | December |                  0 |
 | November |                  0 |
-| October  |                  0 |
 
 #### Total problems by language
 | Language   |   Number of Problems |
