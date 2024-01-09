@@ -1,5 +1,6 @@
 """
-Morse code parser (esoteric)
+Morse code parser
+-----------------
 
 Utilises the morse code constant
 > ETIANMSURWDKGOHVF L PJBXCYZQ

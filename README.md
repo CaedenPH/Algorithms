@@ -4,20 +4,20 @@
 ### Structure
 The structure of the repository:
 ```
-├── Daily Challenges
+├── daily_challenges
 │   ├── 2023
-│   │   ├── June
+│   │   ├── june
 │   │   │   ├── day_one.py
 
-├── Other Problems
-|    ├── Python
+├── other_problems
+|    ├── python
 │    |    ├── expressive_words.py
 
-├── Algorithms
-|    ├── Python
+├── algorithms
+|    ├── python
 |    |   ├── wa_tor.py
 
-├── Advent of Code
+├── advent_of_code
 |    ├── 2023
 |    |   ├── day_one.py
 

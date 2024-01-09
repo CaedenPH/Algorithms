@@ -80,7 +80,7 @@ class UpdateReadme:
         :return: The number of daily challenges in the month
         """
         try:
-            files = os.listdir(f"./Daily Challenges/2023/{month.capitalize()}")
+            files = os.listdir(f"./Daily Challenges/2023/{month.lower()}")
             return len(list(filter(lambda f: re.match(r"day_\d{1,2}.py", f), files)))
         except FileNotFoundError:
             return 0
