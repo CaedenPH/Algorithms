@@ -30,11 +30,11 @@ My solutions may not be the most optimal solutions. I will try to improve them a
 
 ### Leetcode Statistics
 #### Daily challenges by month
-| Month     |   Daily Challenges |
-|-----------|--------------------|
-| December  |                  0 |
-| October   |                  0 |
-| September |                  0 |
+| Month    |   Daily Challenges |
+|----------|--------------------|
+| December |                  0 |
+| November |                  0 |
+| October  |                  0 |
 
 #### Total problems by language
 | Language   |   Number of Problems |
